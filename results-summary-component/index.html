@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lightRed: 'hsl(0, 100%, 67%)',
+            orangeyYellow: 'hsl(39, 100%, 56%)',
+            greenTeal: 'hsl(166, 100%, 37%)',
+            cobaltBlue: 'hsl(234, 85%, 45%)',
+            lightSlateBlue: 'hsl(252, 100%, 67%)',
+            lightRoyalBlue: 'hsl(241, 81%, 54%)',
+            violetBlue: 'hsla(256, 72%, 46%, 1)',
+            persianBlue: 'hsla(241, 72%, 46%, 0)',
+            paleBlue: 'hsl(221, 100%, 96%)',
+            lightLavender: 'hsl(241, 100%, 89%)',
+            darkGrayBlue: 'hsl(224, 30%, 27%)',
+          },
+          fontFamily: {
+            hanken: 'Hanken Grotesk',
+          },
+        }
+      }
+    }
+  </script>
+  
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body class="bg-white font-hanken">
+  <div class="container max-w-[700px] w-full h-screen lg:h-[500px] mx-auto flex flex-col lg:items-center lg:translate-y-24 lg:flex-row lg:shadow-2xl lg:shadow-lightBlue lg:rounded-[30px]">
+    <!-- score section -->
+    <div class="flex flex-col px-9 lg:px-12 justify-evenly items-center lg:w-1/2 h-2/5 lg:h-full bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-[30px] lg:rounded-[30px]">
+      <h2 class="text-lg lg:text-2xl text-lightLavender font-medium">
+        Your Result
+      </h2>
+      <!-- score circle -->
+      <div class="flex flex-col items-center justify-center rounded-full w-[100px] lg:w-[200px] h-[100px] lg:h-[200px] bg-gradient-to-b from-violetBlue to-persianBlue">
+        <span class="text-paleBlue text-4xl lg:text-7xl font-bold">
+          76
+        </span>
+        <span class="text-lightLavender text-sm lg:text-base font-medium">
+          of 100
+        </span>
+      </div>
+      <h2 class="font-bold text-paleBlue text-xl lg:text-3xl">
+        Great
+      </h2>
+      <p class="text-[18px] text-lightLavender lg:text-center leading-5">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </div>
+    <!-- summary section -->
+    <div class="flex flex-col flex-1 justify-between px-5 lg:px-10 h-full py-5 lg:py-9">
+      <h1 class="font-semibold text-xl">
+        Summary
+      </h1>
+      <!-- reaction category container -->
+      <div class="flex justify-between items-center px-2 bg-lightRed/10 h-14 rounded-xl">
+        <!-- icon + category -->
+        <div class="flex w-1/2 text-xl gap-x-2">
+          <img src="./assets/images/icon-reaction.svg" alt="reaction icon" class="h-7">
+          <span class="text-lightRed">
+            Reaction
+          </span>
+        </div>
+        <!-- score -->
+        <div class="text-right w-1/2 text-xl">
+          <span class="font-extrabold">80 </span>
+          <span class="font-medium text-slate-400">/ 100</span>
+        </div>
+      </div>
+      <!-- memory category container -->
+      <div class="flex justify-between items-center px-2 bg-orangeyYellow/10 h-14 rounded-xl">
+        <!-- icon + category -->
+        <div class="flex w-1/2 text-xl gap-x-2">
+          <img src="./assets/images/icon-memory.svg" alt="reaction icon" class="h-7">
+          <span class="text-orangeyYellow">
+            Memory
+          </span>
+        </div>
+        <!-- score -->
+        <div class="text-right w-1/2 text-xl">
+          <span class="font-extrabold">92 </span>
+          <span class="font-medium text-slate-400">/ 100</span>
+        </div>
+      </div>
+      <!-- verbal category container -->
+      <div class="flex justify-between items-center px-2 bg-greenTeal/10 h-14 rounded-xl">
+        <!-- icon + category -->
+        <div class="flex w-1/2 text-xl gap-x-2">
+          <img src="./assets/images/icon-verbal.svg" alt="reaction icon" class="h-7">
+          <span class="text-greenTeal">
+            Verbal
+          </span>
+        </div>
+        <!-- score -->
+        <div class="text-right w-1/2 text-xl">
+          <span class="font-extrabold">61 </span>
+          <span class="font-medium text-slate-400">/ 100</span>
+        </div>
+      </div>
+      <!-- visual category container -->
+      <div class="flex justify-between items-center px-2 bg-cobaltBlue/10 h-14 rounded-xl">
+        <!-- icon + category -->
+        <div class="flex w-1/2 text-xl gap-x-2">
+          <img src="./assets/images/icon-visual.svg" alt="reaction icon" class="h-7">
+          <span class="text-cobaltBlue">
+            Visual
+          </span>
+        </div>
+        <!-- score -->
+        <div class="text-right w-1/2 text-xl">
+          <span class="font-extrabold">72 </span>
+          <span class="font-medium text-slate-400">/ 100</span>
+        </div>
+      </div>
+      <button class="bg-darkGrayBlue h-14 rounded-full text-white text-xl hover:bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue lg:mt-3">Continue</button>
+    </div>
+  </div>
+</body>
+</html>
