@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  padding: 4rem 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.card-1 {
+  background: hsl(31, 77%, 52%);
+}
+
+.card-1 button {
+  color: hsl(31, 77%, 52%);
+}
+
+.card-2 {
+  background: hsl(184, 100%, 22%)
+}
+
+.card-2 button {
+  color: hsl(184, 100%, 22%)
+}
+
+.card-3 {
+  background: hsl(179, 100%, 13%)
+}
+
+.card-3 button {
+  color: hsl(179, 100%, 13%)
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
+
+button {
+  color: hsl(0, 0%, 95%);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  text-transform: capitalize;
+  border: 3px solid hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  transition: all 200ms ease-in-out;
+  font-size: .9rem;
+}
+
+button:hover {
+  background: transparent;
+  cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  padding: 3rem 3rem;
+}
+
+@media (width >=1440px) {
+  main {
+    margin-top: 4rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  p {
+    padding-bottom: 4rem;
+  }
+}
